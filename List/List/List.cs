@@ -15,12 +15,28 @@ namespace List
             set{head=value;}
 
         }
-        public List()
+        //tạo hàm insertfist
+        //in danh sách trong list
+       
+        public void Addfirst(Element<T> e)
         {
-            public void addfirst(Element<T> e)
-            {
                 e.Next=head;
                 this.head=e;
+        }
+
+
+   
+        public List()
+        {
+            this.head= null;
+        }
+        public void printList()
+        {
+            Element<T> point = head;
+            while(point.Next != null)
+            {
+                Console.WriteLine(point.Data);
+                point = point.Next;
             }
         }
     }
